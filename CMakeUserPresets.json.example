@@ -1,12 +1,21 @@
 {
     "version": 2,
     "configurePresets": [
-      {
-        "name": "default",
-        "inherits": "vcpkg",
-        "environment": {
-          "VCPKG_ROOT": "<path to vcpkg>"
+        {
+            "name": "Debug",
+            "inherits": "_Debug",
+            "hidden": false,
+            "environment": {
+                "VCPKG_ROOT": "<path to vcpkg>"
+            }
+        },
+        {
+            "name": "Release",
+            "inherits": "_Release",
+            "hidden": false,
+            "environment": {
+                "VCPKG_ROOT": "<path to vcpkg>"
+            }
         }
-      }
     ]
   }
