@@ -62,7 +62,6 @@ So it is suggested to create a test file like `./tests/test_mynewfile.cpp` and a
 it, mirroring the existing tests (or going off of the GoogleTest docs).
 
 </details>
-<br>
 
 <details>
 <summary><b>👉 Add a package/library</b></summary>
@@ -142,7 +141,6 @@ brew install pkg-config
 ```
 
 </details>
-<br>
 
 <details>
 <summary><b>🧰 Package Manager - <code>vcpkg</code></b></summary>
@@ -180,7 +178,6 @@ vcpkg --version
 
 (see also [this guide](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode?pivots=shell-bash) for setting it up).
 </details>
-<br>
 
 <details>
 <summary><b>🏗️ Build Automation - CMake</b></summary>
@@ -208,7 +205,6 @@ sed -i "" -e "s#<path to vcpkg>#$VCPKG_REPO_CLONE_PATH#g" ./CMakeUserPresets.jso
 2. open `./CMakeUserPresets.json` and replace `<path to vcpkg>` with the absolute path to the directory containing the `vcpkg` executable.
 
 </details>
-<br>
 
 <details>
 <summary><b>📝 Editor + Build Automation Tools - VSCode (Optional)</b></summary>
@@ -257,7 +253,6 @@ cmake --build build
 
 (See also [docs here](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash#4---build-and-run-the-project))
 </details>
-<br>
 
 <details>
 <summary><b>Build via VSCode + CMake</b></summary>
@@ -288,7 +283,6 @@ This is recommended due to it's convenience, but you can use whatever setup.
 ![Screenshot of the sidebar for the CMake Extension](./docs/2025-04-21_13-38.png)
 
 </details>
-<br>
 
 <details>
 <summary><b>b. Use VSCode Run Command (MacOS) </b></summary>
@@ -300,7 +294,6 @@ You can also run the Build steps via the "Run" bar:
 - Run CMake commands specific commands by typing `CMake: <Your Action>` in the `Run` bar (because the `Run` bar contains a bunch of stuff from VSCode and form your other extensions too)
 
 </details>
-<br>
 
 
 <details>
