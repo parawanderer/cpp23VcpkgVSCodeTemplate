@@ -1,5 +1,6 @@
-# build output
+# ===== build output =====
 build
 
-# VSCode
-./CMakeUserPresets.json
+# ===== CMake =====
+# this file can be created locally from CMakeUserPresets.json.example and filling in the variable placeholder
+CMakeUserPresets.json
