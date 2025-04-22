@@ -147,7 +147,7 @@ You don't have to use Docker or the Dev Containers Extension (this setup should 
 However you can use it if you want a Linux dev experience outside of Linux.
 
 <details>
-<summary><b>📦 How to: Dev Containers</b></summary>
+<summary><b>🐳 How to: Dev Containers</b></summary>
 
 
 You will have to install [Docker Desktop](https://www.docker.com/products/docker-desktop/). E.g. via `brew`:
