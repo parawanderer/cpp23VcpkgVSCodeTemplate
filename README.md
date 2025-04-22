@@ -26,7 +26,6 @@ The style of this setup is probably very java-esque as I have been doing a lot o
 <details>
 <summary>ℹ️ Background Info</summary>
 
-> [!INFO]
 > **For the initiated** (java people): you can think of this as those templates that you can get in [IntelliJ](https://www.jetbrains.com/idea/)
 >
 > when you are creating a new project. They set up the entire java directory structure, `/test` and `/main`
