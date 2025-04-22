@@ -11,6 +11,8 @@ I made this because getting this set up was very annoying unlike more popular la
 A C++23 "HelloWorld" Setup Template:
 
 - MacOS/Linux support (via `brew`), technically Windows should be supportable too (am too lazy to add atm)
+- [VSCode Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) Support - hence also support for MacOS/Linux/Windows via Docker
+    - Prerequisite: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Package/dependency management via [`vcpkg`](https://vcpkg.io/en/), with dependencies:
     - `main` project using [`fmt`](https://vcpkg.io/en/package/fmt) library
     - `test` project using [`GoogleTest`](https://vcpkg.io/en/package/gtest) library
@@ -113,11 +115,55 @@ The setup can probably be adapted to Windows, too. Possibly using [chocolatey](h
 
 #### Optional / Recommended
 
-VSCode as the main text editor/IDe, as there are nice IntelliJ-like UI Tools available for C++/CMake in VSCode (think of the `maven` and `gradle` support/sidebar in IntelliJ).
+##### VSCode
+VSCode as the main text editor/IDE, as there are nice IntelliJ-like UI Tools available for C++/CMake in VSCode (think of the `maven` and `gradle` support/sidebar in IntelliJ).
 
 ```sh
 brew install --cask visual-studio-code
 ```
+
+##### VSCode with Docker + Dev Containers Extension
+
+**Prerequisite:** VSCode setup as above.
+
+You don't have to use Docker or the Dev Containers Extension (this setup should work without).
+However you can use it if you want a Linux dev experience outside of Linux.
+
+<details>
+<summary><b>📦 How to: Dev Containers</b></summary>
+
+
+You will have to install [Docker Desktop](https://www.docker.com/products/docker-desktop/). E.g. via `brew`:
+```sh
+brew install --cask docker
+```
+
+You will then install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) for vscode:
+
+```sh
+code --install-extension ms-vscode-remote.remote-containers
+```
+
+You then need to make sure that Docker Desktop is running. So open it and make sure it is running.
+
+Once you have that installed and enabled, you can click this icon at the bottom-left of the VSCode window, and choose `Reopen in Container`:
+
+![Bottom Left Remote Extension Icon](./docs/2025-04-22_09-17.png)
+
+This will create a new Docker container using the `image` defined in [`./.devcontainer/devcontainer.json`](./.devcontainer/devcontainer.json). And it will "reload" VSCode into the container:
+
+|  Docker Desktop | VSCode |
+| ---- | ---- |
+| ![Docker desktop view of what this looks like](./docs/2025-04-22_09-24.png) | ![What VSCode looks like inside of the container](./docs/2025-04-22_09-28.png) |
+
+The `Terminal` you get in this window will be that of the container.
+
+You will likely be prompted to (re)install a bunch of extensions at this point, which you should do, because the extensions "inside of the Container" are different and separate from the extensions on your host machine.
+
+
+You can then proceed to the next steps in this guide. The idea of the "Dev Container" is that it will stick around and get reused while you work on this project, working like a VM. So you can install whatever tools you want in it at whatever locations.
+
+</details>
 
 #### Dependencies + Setup
 
@@ -192,6 +238,10 @@ update and add the following file with your path to the directory of the repo co
 
 **[Option 1]** Automatically by running this command:
 
+<details>
+<summary>🍏 MacOS Command</summary>
+
+
 ```sh
 # Let us assume you cloned the vcpkg repo into ~/git/vcpkg
 VCPKG_REPO_CLONE_PATH=$HOME/git/vcpkg
@@ -199,6 +249,22 @@ VCPKG_REPO_CLONE_PATH=$HOME/git/vcpkg
 cp ./CMakeUserPresets.json.example ./CMakeUserPresets.json
 sed -i "" -e "s#<path to vcpkg>#$VCPKG_REPO_CLONE_PATH#g" ./CMakeUserPresets.json
 ```
+</details>
+
+<details>
+<summary>🐧 Linux Command</summary>
+
+
+```sh
+# Let us assume you cloned the vcpkg repo into ~/git/vcpkg
+VCPKG_REPO_CLONE_PATH=$HOME/git/vcpkg
+
+cp ./CMakeUserPresets.json.example ./CMakeUserPresets.json
+sed -i -e "s#<path to vcpkg>#$VCPKG_REPO_CLONE_PATH#g" ./CMakeUserPresets.json
+```
+</details>
+<br>
+
 
 **[Option 2]** Or manually:
 1. Copy `./CMakeUserPresets.json.example` to `./CMakeUserPresets.json` (this file is ignored by git)

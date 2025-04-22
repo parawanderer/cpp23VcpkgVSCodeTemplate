@@ -1,0 +1,5 @@
+{
+    "name": "C++23",
+    // https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/cpp/tags
+    "image": "mcr.microsoft.com/devcontainers/cpp:1.2.9-ubuntu-24.04"
+}
