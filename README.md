@@ -23,6 +23,18 @@ A C++23 "HelloWorld" Setup Template:
 
 The style of this setup is probably very java-esque as I have been doing a lot of modern Java lately...
 
+> [!TIP]
+> For the initiated: you can think of this as those templates that you can get in [IntelliJ](https://www.jetbrains.com/idea/)
+> when you are creating a new project. They set up the entire java directory structure, `/test` and `/main`
+> folders, a `Main` class with a "Hello World" function, a Test class with unit testing framework [JUnit](https://junit.org/junit5/) and a sample test, a maven `pom.xml` ([dependencies management](https://mvnrepository.com/) via the [maven](https://maven.apache.org/) cli tool) with your specified Java Language Level (e.g. `21`), etc.
+> The idea is that anybody can clone a repo set up like that, and so long as they have java installed, they can immediately get set up with it
+> and debug everything. Dependencies are also centrally managed via maven and locked in place by version -- retrieving dependencies is standardised into maven. Finding dependencies is easy via the `maven` package browser.
+>
+> It basically gives you a template that is very easy to add stuff on top of, saving you the hassle of setting up that entire structure from scratch.
+>
+> I want to have something like this but for C++, hence this repo.
+
+
 ### How to expand on this
 
 Once everything has been set up (see below first)...
