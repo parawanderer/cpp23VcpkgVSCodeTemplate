@@ -20,12 +20,12 @@ I made this because getting this set up was very annoying unlike more popular la
         - [VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)
       - [Dependencies + Setup](#dependencies--setup)
       - [Setup CMake Tools to use `vcpkg`](#setup-cmake-tools-to-use-vcpkg)
-    - [Building](#building)
-    - [Running](#running)
-    - [Testing](#testing)
-      - [From the CLI](#from-the-cli)
-      - [From the VSCode UI](#from-the-vscode-ui)
-    - [Debugging](#debugging)
+  - [Building](#building)
+  - [Running](#running)
+  - [Testing](#testing)
+    - [From the CLI](#from-the-cli)
+    - [From VSCode UI](#from-vscode-ui)
+  - [Debugging](#debugging)
 
 
 ### What is this
@@ -337,7 +337,7 @@ See also section "Building" below.
 
 </details>
 
-### Building
+## Building
 
 
 <details>
@@ -418,7 +418,7 @@ But to be validated/updated.
 </details>
 </details>
 
-### Running
+## Running
 
 After the project has been compiled/built, it is available as a binary in the `./build` output directory.
 
@@ -448,13 +448,13 @@ Ok that is it.
 ```
 
 
-### Testing
+## Testing
 
 On Build, the test project also gets built.
 
 You can run the tests:
 
-#### From the CLI
+### From the CLI
 
 First, clean and build the project (see above). Then:
 
@@ -474,7 +474,7 @@ Test project /Users/sb/git/CppWithVcpkgTemplate/build
 Total Test time (real) =   0.01 sec
 ```
 
-#### From the VSCode UI
+### From VSCode UI
 
 Use the standard `Testing` tab in the UI after (`Clean`ing and) `Build`ing
 the project using the CMake integration:
@@ -486,7 +486,7 @@ the project using the CMake integration:
 ![Screenshot of the Testing tab in VSCode](./docs/2025-04-21_17-49.png)
 </details>
 
-### Debugging
+## Debugging
 
 <details>
 <summary>You can interactively debug via the VSCode UI</summary>
