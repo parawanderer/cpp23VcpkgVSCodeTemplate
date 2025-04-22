@@ -4,6 +4,8 @@
         {
             "name": "default",
             "description": "Shared options",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
             "hidden": true,
             "cacheVariables": {
                 "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
@@ -14,8 +16,6 @@
             "inherits": "default",
             "hidden": true,
             "description": "Debug build with vcpkg",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             }
@@ -25,8 +25,6 @@
             "inherits": "default",
             "hidden": true,
             "description": "Release build with vcpkg",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
