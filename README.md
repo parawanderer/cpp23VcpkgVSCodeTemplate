@@ -46,7 +46,7 @@ A C++23 "HelloWorld" Setup Template:
 The style of this setup is probably very java-esque as I have been doing a lot of modern Java lately...
 
 <details>
-<summary>ℹ️ Background Info</summary>
+<summary><b>ℹ️ Background Info</b></summary>
 
 > **For the initiated** (java people): you can think of this as those templates that you can get in [IntelliJ](https://www.jetbrains.com/idea/)
 > when you are creating a new project.
@@ -61,6 +61,21 @@ The style of this setup is probably very java-esque as I have been doing a lot o
 > I want to have something like this but for C++, hence this repo.
 </details>
 
+
+<details>
+<summary><b>ℹ️ Overview of Supported Setups</b></summary>
+
+- MacOS
+  - MacOS native ✅
+  - MacOS + [Docker](https://www.docker.com/products/docker-desktop/) + [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (isolated "local linux VM" on MacOS) ✅
+- Linux
+  - Linux native ✅
+  - Linux + [Docker](https://www.docker.com/products/docker-desktop/) + [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (isolated "local linux VM") ✅
+- Windows
+  - Windows native ❓ (TODO: to be validated/updated here if it works)
+  - Windows + [WSL](https://learn.microsoft.com/en-us/windows/wsl/) + [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) ✅
+  - Windows + [Docker](https://www.docker.com/products/docker-desktop/) + [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (isolated "local linux VM" on Windows) ✅
+</details>
 
 ### How to expand on this
 
@@ -149,7 +164,8 @@ gtest_discover_tests(${PROJECT_TEST_EXECUTABLE_NAME}) # ^
 
 Have some system package manager installed (i.e. not for code-level C++ libraries themselves). The subsequent commands are based on [brew](https://brew.sh/) (available on MacOS/Linux).
 
-The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/). Alternatively, just use VSCode as your editor + Docker to run this under Linux (WSL), then you don't need to bother making this work in Windows. More details on that below (Section: "[VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)")
+The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/). Alternatively, just use VSCode as your editor (optionally + Docker) to run this under Linux (WSL), then you don't need to bother making this work in Windows. You have two options for this:
+- WSL + More details on that below (Section: "[VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)")
 
 
 #### Optional
