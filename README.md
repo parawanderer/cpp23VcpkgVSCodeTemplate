@@ -15,17 +15,17 @@ I made this because getting this set up was very annoying unlike more popular la
   - [🛠️ Setup](#️-setup)
     - [📋 Prerequisites](#-prerequisites)
       - [Mandatory](#mandatory)
-      - [Optional / Recommended](#optional--recommended)
+      - [Optional](#optional)
         - [VSCode](#vscode)
         - [VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)
       - [Dependencies + Setup](#dependencies--setup)
       - [Setup CMake Tools to use `vcpkg`](#setup-cmake-tools-to-use-vcpkg)
-  - [Building](#building)
-  - [Running](#running)
-  - [Testing](#testing)
-    - [From the CLI](#from-the-cli)
+  - [🔨 Building](#-building)
+  - [🏃 Running](#-running)
+  - [🧪 Testing](#-testing)
+    - [Via CLI](#via-cli)
     - [From VSCode UI](#from-vscode-ui)
-  - [Debugging](#debugging)
+  - [🔴 Debugging](#-debugging)
 
 
 ### What is this
@@ -149,10 +149,10 @@ gtest_discover_tests(${PROJECT_TEST_EXECUTABLE_NAME}) # ^
 
 Have some system package manager installed (i.e. not for code-level C++ libraries themselves). The subsequent commands are based on [brew](https://brew.sh/) (available on MacOS/Linux).
 
-The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/). Alternatively, just use VSCode as your editor + Docker to run this under Linux (WSL), then you don't need to bother making this work in Windows. More details on that below (Section: "[VSCode with Docker + Dev Containers Extension](https://github.com/parawanderer/cpp23VcpkgVSCodeTemplate?tab=readme-ov-file#vscode-with-docker--dev-containers-extension)")
+The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/). Alternatively, just use VSCode as your editor + Docker to run this under Linux (WSL), then you don't need to bother making this work in Windows. More details on that below (Section: "[VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)")
 
 
-#### Optional / Recommended
+#### Optional
 
 ##### VSCode
 [VSCode](https://code.visualstudio.com/download) as the main text editor/IDE, as there are nice IntelliJ-like UI Tools available for C++/CMake in VSCode (think of the `maven` and `gradle` support/sidebar in IntelliJ).
@@ -337,7 +337,7 @@ See also section "Building" below.
 
 </details>
 
-## Building
+## 🔨 Building
 
 
 <details>
@@ -418,7 +418,7 @@ But to be validated/updated.
 </details>
 </details>
 
-## Running
+## 🏃 Running
 
 After the project has been compiled/built, it is available as a binary in the `./build` output directory.
 
@@ -448,13 +448,13 @@ Ok that is it.
 ```
 
 
-## Testing
+## 🧪 Testing
 
 On Build, the test project also gets built.
 
 You can run the tests:
 
-### From the CLI
+### Via CLI
 
 First, clean and build the project (see above). Then:
 
@@ -486,7 +486,7 @@ the project using the CMake integration:
 ![Screenshot of the Testing tab in VSCode](./docs/2025-04-21_17-49.png)
 </details>
 
-## Debugging
+## 🔴 Debugging
 
 <details>
 <summary>You can interactively debug via the VSCode UI</summary>
