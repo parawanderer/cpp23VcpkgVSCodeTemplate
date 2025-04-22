@@ -122,7 +122,7 @@ gtest_discover_tests(${PROJECT_TEST_EXECUTABLE_NAME}) # ^
 
 Have some system package manager installed (i.e. not for code-level C++ libraries themselves). The subsequent commands are based on [brew](https://brew.sh/) (available on MacOS/Linux).
 
-The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/).
+The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/). Alternatively, just use VSCode as your editor + Docker to run this under Linux (WSL), then you don't need to bother making this work in Windows. More details on that below (Section: "[VSCode with Docker + Dev Containers Extension](https://github.com/parawanderer/cpp23VcpkgVSCodeTemplate?tab=readme-ov-file#vscode-with-docker--dev-containers-extension)")
 
 
 #### Optional / Recommended
