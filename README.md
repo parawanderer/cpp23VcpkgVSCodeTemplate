@@ -133,7 +133,7 @@ The setup can probably be adapted to Windows, too. Possibly using [chocolatey](h
 #### Optional / Recommended
 
 ##### VSCode
-VSCode as the main text editor/IDE, as there are nice IntelliJ-like UI Tools available for C++/CMake in VSCode (think of the `maven` and `gradle` support/sidebar in IntelliJ).
+[VSCode](https://code.visualstudio.com/download) as the main text editor/IDE, as there are nice IntelliJ-like UI Tools available for C++/CMake in VSCode (think of the `maven` and `gradle` support/sidebar in IntelliJ).
 
 ```sh
 brew install --cask visual-studio-code
