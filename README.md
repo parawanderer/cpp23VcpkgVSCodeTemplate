@@ -262,11 +262,12 @@ And click "OK" in any popups that appear regarding this.
 sudo apt-get update
 
 # C++ Build tools
-sudo apt-get install install build-essential cmake cppcheck valgrind clang lldb llvm gdb
+sudo apt-get install build-essential cmake cppcheck valgrind clang lldb llvm gdb
 ```
 (The list is based on [this dockerfile for Dev Containers ubuntu 24.04](https://github.com/devcontainers/images/blob/0f13a9b8a31b9c81be78abfc404cc00748e946bb/src/cpp/.devcontainer/Dockerfile) which "just works")
 
 </details>
+<br>
 
 </details>
 
