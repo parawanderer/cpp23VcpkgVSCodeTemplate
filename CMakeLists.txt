@@ -12,19 +12,6 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# debug setup
-# set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -stdlib=libc++")
-#endregion
-
-#region Configuration: MacOS
-# Use the llvm compiler from brew on MacOS (brew install llvm)
-if(APPLE)
-    set(CMAKE_C_COMPILER /opt/homebrew/opt/llvm/bin/clang)
-    set(CMAKE_CXX_COMPILER /opt/homebrew/opt/llvm/bin/clang++)
-endif()
-#endregion
-
-
 # =====  Dependencies  =====
 
 find_package(fmt CONFIG REQUIRED)

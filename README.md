@@ -122,6 +122,12 @@ it, mirroring the existing tests (or going off of the GoogleTest docs).
 <summary><b>👉 How To: Add a package/library</b></summary>
 <br>
 
+First, make sure to update the list of available library packages by going to the directory where you cloned `vcpkg`
+(how to do this is explained in the "Setup" section), and then running:
+```sh
+git pull --ff-only
+```
+
 Suppose you want to add [gtest](https://github.com/google/googletest) (the idea is equivalent for other packages/libraries that are available in `vcpkg`):
 
 1\. Add it to `vcpkg.json`
@@ -236,15 +242,31 @@ First, install [brew](https://brew.sh/) (MacOS/Linux) or equivalent.
 
 Then, install C++ build tools:
 
-```sh
-brew update
+<details>
+<summary>🍏 For MacOS</summary>
+<br>
 
-# C++ build tools
-brew install llvm
-brew install cmake
-brew install ninja
-brew install pkg-config
+Run:
+```sh
+xcode-select --install
 ```
+And click "OK" in any popups that appear regarding this.
+
+</details>
+
+<details>
+<summary>🐧 For Linux (Ubuntu)</summary>
+<br>
+
+```sh
+sudo apt-get update
+
+# C++ Build tools
+sudo apt-get install install build-essential cmake cppcheck valgrind clang lldb llvm gdb
+```
+(The list is based on [this dockerfile for Dev Containers ubuntu 24.04](https://github.com/devcontainers/images/blob/0f13a9b8a31b9c81be78abfc404cc00748e946bb/src/cpp/.devcontainer/Dockerfile) which "just works")
+
+</details>
 
 </details>
 
@@ -288,6 +310,9 @@ vcpkg --version
 <details>
 <summary><b>🏗️ Build Automation - <code>CMake</code></b></summary>
 <br>
+
+⚠️ First: ensure you return to the directory for this repo in your terminal!
+
 
 The following setup is needed for Build Automation both via the CLI as well as via the VSCode UI.
 See also the docs on the setup [here](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash).
@@ -529,8 +554,15 @@ the project using the CMake integration:
 </details>
 
 <details>
-<summary>🐧 Debugging Example Linux (Dev Containers)</summary>
+<summary>🐧 Debugging Example Linux via MacOS (Dev Containers)</summary>
 
-![Debugging Example Linux (Dev Containers)](./docs/2025-04-22_10-04.png)
+![Debugging Example Linux via MacOS (Dev Containers)](./docs/2025-04-22_10-04.png)
 </details>
+
+<details>
+<summary>🍏 Debugging Example native MacOS</summary>
+
+![Debugging Example native MacOS](./docs/2025-04-22_12-28.png)
+</details>
+
 </details>
