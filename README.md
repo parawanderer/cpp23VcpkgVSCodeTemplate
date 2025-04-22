@@ -6,12 +6,12 @@ Hopefully easy to copy-paste from. If anybody except myself runs across this, fe
 
 I made this because getting this set up was very annoying unlike more popular languages like Java or python and nodejs these days.
 
-### Table of Contents
+### 📑 Table of Contents
 
 - [C++23 Template Project using VCPKG + Cheatsheet](#c23-template-project-using-vcpkg--cheatsheet)
-    - [Table of Contents](#table-of-contents)
-    - [What is this](#what-is-this)
-    - [How to expand on this](#how-to-expand-on-this)
+    - [📑 Table of Contents](#-table-of-contents)
+    - [ℹ️ What is this](#ℹ️-what-is-this)
+    - [🧩 How to expand on this](#-how-to-expand-on-this)
   - [🛠️ Setup](#️-setup)
     - [📋 Prerequisites](#-prerequisites)
       - [Mandatory](#mandatory)
@@ -28,7 +28,7 @@ I made this because getting this set up was very annoying unlike more popular la
   - [🔴 Debugging](#-debugging)
 
 
-### What is this
+### ℹ️ What is this
 
 A C++23 "HelloWorld" Setup Template:
 
@@ -77,7 +77,7 @@ The style of this setup is probably very java-esque as I have been doing a lot o
   - Windows + [Docker](https://www.docker.com/products/docker-desktop/) + [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (isolated "local linux VM" on Windows) ✅
 </details>
 
-### How to expand on this
+### 🧩 How to expand on this
 
 Once everything has been set up (see below first)...
 
