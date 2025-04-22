@@ -6,6 +6,28 @@ Hopefully easy to copy-paste from. If anybody except myself runs across this, fe
 
 I made this because getting this set up was very annoying unlike more popular languages like Java or python and nodejs these days.
 
+### Table of Contents
+
+- [C++23 Template Project using VCPKG + Cheatsheet](#c23-template-project-using-vcpkg--cheatsheet)
+    - [Table of Contents](#table-of-contents)
+    - [What is this](#what-is-this)
+    - [How to expand on this](#how-to-expand-on-this)
+  - [🛠️ Setup](#️-setup)
+    - [📋 Prerequisites](#-prerequisites)
+      - [Mandatory](#mandatory)
+      - [Optional / Recommended](#optional--recommended)
+        - [VSCode](#vscode)
+        - [VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)
+      - [Dependencies + Setup](#dependencies--setup)
+      - [Setup CMake Tools to use `vcpkg`](#setup-cmake-tools-to-use-vcpkg)
+    - [Building](#building)
+    - [Running](#running)
+    - [Testing](#testing)
+      - [From the CLI](#from-the-cli)
+      - [From the VSCode UI](#from-the-vscode-ui)
+    - [Debugging](#debugging)
+
+
 ### What is this
 
 A C++23 "HelloWorld" Setup Template:
