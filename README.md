@@ -295,6 +295,7 @@ Next, install these extensions for working with C++ using VSCode:
 
 ```sh
 code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension ms-vscode.cmake-tools
 code --install-extension vadimcn.vscode-lldb
 code --install-extension hbenl.vscode-test-explorer
@@ -467,12 +468,21 @@ the project using the CMake integration:
 1. Go to the `Run and Debug` tab
 2. Set breakpoints in your files by clicking in the left margin and placing red dots, as usual
 3. Choose a debug configuration
-    1. Use `C++: debug main` as the debug dropdown option to debug [`main.cpp`](./src/main.cpp)
-    2. Use `C++: debug test` as the debug dropdown option to debug the Unit Tests
+    1. Use `C++: Debug main` as the debug dropdown option to debug [`main.cpp`](./src/main.cpp)
+    2. Use `C++: Debug test` as the debug dropdown option to debug the Unit Tests
 4. When debugging Unit Tests, you can also:
     - Right-Click the icon next to a testcase and choose the "`Debug`" option there, to limit the debugging to that Unit Test
     - Right-Click tests in the Testing list and choose "`Debug`" there
 
-![Debug Tab Overview](./docs/2025-04-21_18-58.png)
+<details>
+<summary>👁️ Debug Tab Overview</summary>
 
+![Debug Tab Overview](./docs/2025-04-21_18-58.png)
+</details>
+
+<details>
+<summary>🐧 Debugging Example Linux (Dev Containers)</summary>
+
+![Debugging Example Linux (Dev Containers)](./docs/2025-04-22_10-04.png)
+</details>
 </details>

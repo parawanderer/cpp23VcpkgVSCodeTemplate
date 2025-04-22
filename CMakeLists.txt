@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # debug setup
-set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -stdlib=libc++")
+# set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -stdlib=libc++")
 #endregion
 
 #region Configuration: MacOS
