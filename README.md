@@ -218,6 +218,7 @@ Next, install these extensions for working with C++ using VSCode:
 ```sh
 code --install-extension ms-vscode.cpptools
 code --install-extension ms-vscode.cmake-tools
+code --install-extension vadimcn.vscode-lldb
 code --install-extension hbenl.vscode-test-explorer
 code --install-extension matepek.vscode-catch2-test-adapter
 ```
