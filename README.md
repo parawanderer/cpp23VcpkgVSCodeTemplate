@@ -15,9 +15,8 @@ I made this because getting this set up was very annoying unlike more popular la
   - [🛠️ Setup](#️-setup)
     - [📋 Prerequisites](#-prerequisites)
       - [Mandatory](#mandatory)
-      - [Optional](#optional)
-        - [VSCode](#vscode)
-        - [VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)
+      - [Optional: VSCode](#optional-vscode)
+      - [Optional: VSCode with Docker + Dev Containers Extension](#optional-vscode-with-docker--dev-containers-extension)
       - [Dependencies + Setup](#dependencies--setup)
       - [Setup CMake Tools to use `vcpkg`](#setup-cmake-tools-to-use-vcpkg)
   - [🔨 Building](#-building)
@@ -85,7 +84,7 @@ Once everything has been set up (see below first)...
 
 
 <details>
-<summary><b>👉 Adding a new <code>.cpp</code> file</b></summary>
+<summary><b>👉 How To: Adding a new <code>.cpp</code> file</b></summary>
 <br>
 
 Then it needs to be "registered" in `CMakeLists.txt`.
@@ -120,7 +119,7 @@ it, mirroring the existing tests (or going off of the GoogleTest docs).
 </details>
 
 <details>
-<summary><b>👉 Add a package/library</b></summary>
+<summary><b>👉 How To: Add a package/library</b></summary>
 <br>
 
 Suppose you want to add [gtest](https://github.com/google/googletest) (the idea is equivalent for other packages/libraries that are available in `vcpkg`):
@@ -162,24 +161,30 @@ gtest_discover_tests(${PROJECT_TEST_EXECUTABLE_NAME}) # ^
 
 #### Mandatory
 
-Have some system package manager installed (i.e. not for code-level C++ libraries themselves). The subsequent commands are based on [brew](https://brew.sh/) (available on MacOS/Linux).
+Have some system package manager installed (i.e. not for code-level C++ libraries themselves).
+
+<details>
+<summary>More Info</summary>
+
+The subsequent commands are based on [brew](https://brew.sh/) (available on MacOS/Linux).
 
 The setup can probably be adapted to Windows, too. Possibly using [chocolatey](https://chocolatey.org/). Alternatively, just use VSCode as your editor (optionally + Docker) to run this under Linux (WSL), then you don't need to bother making this work in Windows. You have two options for this:
-- WSL + More details on that below (Section: "[VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)")
+- [WSL](https://learn.microsoft.com/en-us/windows/wsl/) + [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) and run via the extension as if you are natively developing on Linux from here
+- [Docker](https://www.docker.com/products/docker-desktop/) + [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) - more details on that below (Section: "[VSCode with Docker + Dev Containers Extension](#vscode-with-docker--dev-containers-extension)")
+</details>
 
 
-#### Optional
+#### Optional: VSCode
 
-##### VSCode
 [VSCode](https://code.visualstudio.com/download) as the main text editor/IDE, as there are nice IntelliJ-like UI Tools available for C++/CMake in VSCode (think of the `maven` and `gradle` support/sidebar in IntelliJ).
 
 ```sh
 brew install --cask visual-studio-code
 ```
 
-##### VSCode with Docker + Dev Containers Extension
+#### Optional: VSCode with Docker + Dev Containers Extension
 
-**Prerequisite:** VSCode setup as above.
+Prerequisite: VSCode setup as above.
 
 You don't have to use Docker or the Dev Containers Extension (this setup should work without).
 However you can use it if you want a Linux dev experience outside of Linux.
@@ -223,7 +228,7 @@ You can then proceed to the next steps in this guide. The idea of the "Dev Conta
 #### Dependencies + Setup
 
 <details>
-<summary><b>📦 Base Dependencies (via e.g. Homebrew)</b></summary>
+<summary><b>📦 Base Dependencies (via e.g. <code>brew</code>)</b></summary>
 <br>
 
 First, install [brew](https://brew.sh/) (MacOS/Linux) or equivalent.
@@ -281,7 +286,7 @@ vcpkg --version
 </details>
 
 <details>
-<summary><b>🏗️ Build Automation - CMake</b></summary>
+<summary><b>🏗️ Build Automation - <code>CMake</code></b></summary>
 <br>
 
 The following setup is needed for Build Automation both via the CLI as well as via the VSCode UI.
@@ -328,7 +333,7 @@ sed -i -e "s#<path to vcpkg>#$VCPKG_REPO_CLONE_PATH#g" ./CMakeUserPresets.json
 </details>
 
 <details>
-<summary><b>📝 Editor + Build Automation Tools - VSCode (Optional)</b></summary>
+<summary><b>📝 Editor + Build Automation Tools - <code>VSCode</code> (Optional)</b></summary>
 <br>
 
 It's not mandatory to use VSCode, but the project was set up around it.
@@ -387,11 +392,11 @@ There's a few ways to do this (including strictly via the terminal but this woul
 
 This is very similar to e.g. `maven` for Java (think of `mvn clean compile`, `mvn test`, ...).
 
-TL;DR:
+TL;DR (choose one):
 
 
 <details>
-<summary><b>a. Use VSCode Commands UI (⭐️ Recommended)</b></summary>
+<summary><b>a) Use VSCode Commands UI (⭐️ Recommended)</b></summary>
 <br>
 
 You can run the build steps via the UI, similar to how this works e.g. in IntelliJ for Java.
@@ -408,7 +413,7 @@ This is recommended due to it's convenience, but you can use whatever setup.
 </details>
 
 <details>
-<summary><b>b. Use VSCode Run Command (MacOS) </b></summary>
+<summary><b>b) Use VSCode Run Command (MacOS) </b></summary>
 <br>
 
 You can also run the Build steps via the "Run" bar:
@@ -420,7 +425,7 @@ You can also run the Build steps via the "Run" bar:
 
 
 <details>
-<summary><b>c. Others: TODO add equivalent setups/commands</b></summary>
+<summary><b>c) Others: TODO add equivalent setups/commands</b></summary>
 <br>
 
 TODO...
